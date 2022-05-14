@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
+import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import HomePage from './pages/Homepage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CampSitesDirectoryPage from './pages/CampsitesDirectoryPage';
 import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import './App.css';
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
                 <Route path='/' element={ <HomePage />} />
                 <Route path='contact' element={ <ContactPage />} />
                 <Route path='directory' element={ <CampSitesDirectoryPage />} />
+                <Route path='about' element={ <AboutPage /> } />
+                <Route 
+                    path='directory/:campsiteId'
+                    element={<CampsiteDetailPage / >}
+                    />
             </Routes>
             <Footer />
         </div>
